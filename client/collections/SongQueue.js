@@ -22,9 +22,8 @@ var SongQueue = Songs.extend({
 
   playFirst: function() {
     var firstSong = this.at(0);
-    if (firstSong) {
-      firstSong.play();
-    }
+    firstSong.set('playCount', firstSong.get('playCount') + 1);
+    firstSong.play();
   }
 
 });
